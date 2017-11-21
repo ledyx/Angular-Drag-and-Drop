@@ -1,0 +1,18 @@
+[draggable=true] {
+  user-select: none;
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+li {
+  list-style-type: none;
+  background-color: cyan;
+  margin-bottom: 30px;
+}
+
+.drop-zone {
+  background-color: cyan;
+  height: 100px;
+}
