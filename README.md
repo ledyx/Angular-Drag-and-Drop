@@ -1,5 +1,9 @@
 # DragAndDrop
- Angular(2+) example for "Drag & Drop" 
+
+Angular(2+) example for "Drag & Drop" 
+
+![](https://github.com/xeyez/Angular-Drag-and-Drop/blob/master/screenshot.jpg)
+
 
 ## How to run?
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
