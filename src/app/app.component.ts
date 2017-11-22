@@ -46,7 +46,7 @@ export class AppComponent {
     const sourceData = this.unwrapData(event.dataTransfer.getData('text'));
     const targetData = this.unwrapData(this.destTargetData);
 
-    this.swap(sourceData.index, targetData.index);
+    this.moveIndex(sourceData.index, targetData.index);
 
     (event.target as HTMLElement).style.backgroundColor = "cyan";
   }
@@ -71,12 +71,14 @@ export class AppComponent {
     return JSON.parse(jsonString);
   }
 
-  private swap(index1: number, index2: number) {
-    if((index1 === index2) || (index1 < 0) || (index2 < 0))
+  private moveIndex(sourceIndex: number, destIndex: number) {
+    if((sourceIndex === destIndex) || (sourceIndex < 0) || (destIndex < 0))
       return;
 
-    const temp = this.items[index1];
-    this.items[index1] = this.items[index2];
-    this.items[index2] = temp;
+    //remove
+    const temp = this.items.splice(sourceIndex, 1);
+
+    //insert
+    this.items.splice(destIndex, 0, temp[0]);
   }
 }
